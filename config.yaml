@@ -1,0 +1,13 @@
+- viewName: mydataset.vw_job_profile
+  baseTables:
+    - mydataset.emp_profile
+    - mydataset.emp_department
+    - mydataset.emp_payroll
+  joinKey: emp_id
+  filterConditions:
+    - emp_profile.management_level > 87
+    - emp_department.dept_name = 'IT'
+    - emp_payroll.year = 2020
+  excludeColumns:
+    - insert_timestamp
+    - update_timestamp
